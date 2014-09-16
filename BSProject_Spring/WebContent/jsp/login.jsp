@@ -17,11 +17,14 @@
 <script src="${pageContext.servletContext.contextPath}/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$("button[type=submit]").click(function(){
-		// サーバテストの場合、この行コメントアウトする
-		$(this).attr("disabled", true);
+	$("form").on("click", "button", function(e){
+		var clickBtn = e.target;
+		if (clickBtn.type == "submit") {
+			// サーバテストの場合、この行コメントアウトする
+			$(clickBtn).attr("disabled", true);
+			clickBtn.form.submit();
+		}
 	});
-	
 });
 
 </script>
