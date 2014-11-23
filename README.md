@@ -1,1 +1,1 @@
-repository for company developer
+repository for company develop
