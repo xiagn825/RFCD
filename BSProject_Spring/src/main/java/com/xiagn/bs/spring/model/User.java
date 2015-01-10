@@ -1,4 +1,4 @@
-package com.xiagn.bs.spring;
+package main.java.spring.model;
 
 import java.io.Serializable;
 
@@ -10,8 +10,10 @@ public class User implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -8197623151474814318L;
+
 	@NotEmpty
 	private String username;
+	
 	@NotEmpty
 	private String password;
 	

@@ -1,4 +1,4 @@
-package com.xiagn.bs.spring;
+package main.java.spring;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginServlet extends HttpServlet{
+public class AdminLoginServlet extends HttpServlet{
 	
 	/**
 	 * 
@@ -43,12 +43,9 @@ public class LoginServlet extends HttpServlet{
 		String password = req.getParameter("password");
 		User user = new User(username, password);
 		UserService userService = new UserService();
-		if (userService.isUser(user)) {
-			req.setAttribute("user", user);
-			req.getRequestDispatcher("/jsp/welcome.jsp").forward(req, resp);
-		} else {
-			req.setAttribute("isValid", false);
-			req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+		if (userService.isAdmin(user)) {
+			req.setAttribute("users", userService.showAllUser());
+			req.getRequestDispatcher("/jsp/adminConfig.jsp").forward(req, resp);
 		}
 	}
 	

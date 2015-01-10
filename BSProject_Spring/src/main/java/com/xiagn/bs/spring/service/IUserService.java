@@ -1,8 +1,8 @@
-package com.xiagn.bs.spring.service;
+package main.java.spring.service;
 
 import java.util.List;
 
-import com.xiagn.bs.spring.User;
+import main.java.spring.User;
 
 public interface IUserService {
 	public boolean isAdmin(User user);

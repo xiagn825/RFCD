@@ -1,14 +1,8 @@
-package com.xiagn.bs.spring.service;
+package main.java.spring;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
-import com.xiagn.bs.spring.ApplicationCache;
-import com.xiagn.bs.spring.User;
-
-@Service
-public class UserService implements IUserService{
+public class UserService {
 	
 	public boolean isAdmin(User user) {
 		return ApplicationCache.getInstance().isAdmin(user);

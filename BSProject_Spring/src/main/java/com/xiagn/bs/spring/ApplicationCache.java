@@ -1,4 +1,4 @@
-package com.xiagn.bs.spring;
+package main.java.spring;
 
 import java.util.ArrayList;
 import java.util.HashMap;
