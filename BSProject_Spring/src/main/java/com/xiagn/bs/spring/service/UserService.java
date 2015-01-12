@@ -1,11 +1,11 @@
-package main.java.spring.service;
+package com.xiagn.bs.spring.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import main.java.spring.ApplicationCache;
-import main.java.spring.User;
+import com.xiagn.bs.spring.ApplicationCache;
+import com.xiagn.bs.spring.model.User;
 
 @Service
 public class UserService implements IUserService{

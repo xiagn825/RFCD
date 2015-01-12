@@ -1,4 +1,4 @@
-package main.java.spring.model;
+package com.xiagn.bs.spring.model;
 
 import java.io.Serializable;
 

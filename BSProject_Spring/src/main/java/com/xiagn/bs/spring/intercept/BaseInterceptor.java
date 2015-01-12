@@ -1,4 +1,4 @@
-package main.java.spring.intercept;
+package com.xiagn.bs.spring.intercept;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -30,7 +30,7 @@ public class BaseInterceptor implements HandlerInterceptor{
 		
 	}
 	/**
-	 * w’è•û–@Às‘O
+	 * ï¿½wï¿½ï¿½ï¿½@ï¿½ï¿½ï¿½sï¿½O
 	 */
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
@@ -40,7 +40,7 @@ public class BaseInterceptor implements HandlerInterceptor{
 		if (session == null) {
 			return false;
 		}
-		//TODO userŒŸØˆ—
+		//TODO userï¿½ï¿½ï¿½Øï¿½ï¿½ï¿½
 		
 		if (StringUtils.equalsIgnoreCase(EXCLUDE_HANDLE, handler.getClass().getName())) {
 			return true;
@@ -52,13 +52,13 @@ public class BaseInterceptor implements HandlerInterceptor{
 	private boolean isDuplicateSubmit(HttpServletRequest request,
 			HttpServletResponse response, HttpSession session)
 			throws IOException {
-		// “ñd‰Ÿ‰º–h~ˆ—
-		// ƒŠƒNƒGƒXƒgGET‚Ìê‡ATOKENİ’è
+		// ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½hï¿½~ï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½ï¿½Nï¿½Gï¿½Xï¿½gGETï¿½Ìê‡ï¿½ATOKENï¿½İ’ï¿½
 		if (request.getMethod().equalsIgnoreCase("GET")) {
 			String uid = UUID.randomUUID().toString();
 			session.setAttribute(TOKEN_NAME, uid);
 		} else if (request.getMethod().equalsIgnoreCase("POST")) {
-			// ƒŠƒNƒGƒXƒgPOST‚Ìê‡ATOKENŒŸØ
+			// ï¿½ï¿½ï¿½Nï¿½Gï¿½Xï¿½gPOSTï¿½Ìê‡ï¿½ATOKENï¿½ï¿½ï¿½ï¿½
 			String rToken = request.getParameter(TOKEN_NAME);
 			Object sToken = session.getAttribute(TOKEN_NAME);
 			if (StringUtils.isNotEmpty(rToken) && !rToken.equals(sToken)) {

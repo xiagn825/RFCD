@@ -1,4 +1,4 @@
-package main.java.spring;
+package com.xiagn.bs.spring;
 
 import java.io.IOException;
 
@@ -8,6 +8,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.xiagn.bs.spring.model.User;
+import com.xiagn.bs.spring.service.UserService;
 
 public class LoginServlet extends HttpServlet{
 	

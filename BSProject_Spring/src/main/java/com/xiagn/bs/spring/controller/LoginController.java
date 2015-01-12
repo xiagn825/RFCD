@@ -1,4 +1,4 @@
-package main.java.spring.controller;
+package com.xiagn.bs.spring.controller;
 
 import javax.validation.Valid;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import main.java.spring.User;
-import main.java.spring.service.IUserService;
+import com.xiagn.bs.spring.model.User;
+import com.xiagn.bs.spring.service.IUserService;
 
 @Controller
 @RequestMapping("/login")

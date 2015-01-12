@@ -1,4 +1,4 @@
-package main.java.spring;
+package com.xiagn.bs.spring;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +8,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
+
+import com.xiagn.bs.spring.model.User;
 
 public class ApplicationCache {
 	private Map<String, String> userDataMap = new HashMap<String, String>(); 

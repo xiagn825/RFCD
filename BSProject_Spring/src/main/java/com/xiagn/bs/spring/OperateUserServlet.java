@@ -1,4 +1,4 @@
-package main.java.spring;
+package com.xiagn.bs.spring;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
+
+import com.xiagn.bs.spring.model.User;
+import com.xiagn.bs.spring.service.UserService;
 
 public class OperateUserServlet  extends HttpServlet {
 

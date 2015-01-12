@@ -1,4 +1,4 @@
-package main.java.spring;
+package com.xiagn.bs.spring;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
